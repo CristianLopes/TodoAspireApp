@@ -11,11 +11,13 @@
 
   <ItemGroup>
     <PackageReference Include="Aspire.Hosting.AppHost" Version="8.0.0" />
+    <PackageReference Include="Aspire.Hosting.PostgreSQL" Version="8.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TodoApp.Api\TodoApp.Api.csproj" />
     <ProjectReference Include="..\TodoApp.WebApp\TodoApp.WebApp.csproj" />
+    <ProjectReference Include="..\TodoAspireApp.Service.DatabaseMigration\TodoAspireApp.Service.DatabaseMigration.csproj" />
   </ItemGroup>
 
 </Project>
