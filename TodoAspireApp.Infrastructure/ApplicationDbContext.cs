@@ -12,5 +12,6 @@ namespace TodoAspireApp.Infrastructure
 
         public DbSet<User> Users { get; set; }
         public DbSet<TodoItem> TodoItems { get; set; }
+        public DbSet<UserTodos> UserTodos { get; set; }
     }
 }
