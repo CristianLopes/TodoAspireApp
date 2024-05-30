@@ -18,6 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TodoAspireApp.Application\TodoAspireApp.Application.csproj" />
+    <ProjectReference Include="..\TodoAspireApp.Infrastructure\TodoAspireApp.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
