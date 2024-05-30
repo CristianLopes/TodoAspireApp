@@ -1,8 +1,11 @@
 using TodoApp.WebApp.Components;
+using TodoAspireApp.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
+
+builder.AddInfrastructureDependencies();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

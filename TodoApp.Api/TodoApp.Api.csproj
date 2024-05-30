@@ -7,6 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TodoAspireApp.Application\TodoAspireApp.Application.csproj" />
+    <ProjectReference Include="..\TodoAspireApp.Domain\TodoAspireApp.Domain.csproj" />
+    <ProjectReference Include="..\TodoAspireApp.Infrastructure\TodoAspireApp.Infrastructure.csproj" />
     <ProjectReference Include="..\TodoAspireApp.ServiceDefaults\TodoAspireApp.ServiceDefaults.csproj" />
   </ItemGroup>
 
