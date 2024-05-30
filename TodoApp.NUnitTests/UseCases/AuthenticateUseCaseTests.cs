@@ -17,7 +17,7 @@ namespace TodoApp.NUnitTests.UseCases
 
             var useCase = new AuthenticateUseCase(repository, encryption);
 
-            await repository.Create(new User(name: "Cristian", email: "cristian@gmail.com", passwordHash: encryption.HashPassword("123456")));
+            await repository.Add(new User(name: "Cristian", email: "cristian@gmail.com", passwordHash: encryption.HashPassword("123456")));
 
             userAuthenticated = await useCase.Execute(new AuthenticateUseCaseRequest(email: "cristian@gmail.com", password: "123456"));
 

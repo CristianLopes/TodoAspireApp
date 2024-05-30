@@ -7,7 +7,7 @@ namespace TodoApp.NUnitTests
     {
         private List<User> users = new List<User>();
 
-        public Task<User> Create(User user)
+        public Task<User> Add(User user)
         {
             users.Add(user);
             return Task.FromResult(user);

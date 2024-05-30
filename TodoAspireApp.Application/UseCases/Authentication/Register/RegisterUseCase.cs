@@ -17,7 +17,7 @@ namespace TodoAspireApp.Application.UseCases.Authentication.Register
             }
 
             var passwordHash = passwordEncryption.HashPassword(request.Password);
-            var user = await userRepository.Create(new User(request.Name, request.Email, passwordHash));
+            var user = await userRepository.Add(new User(request.Name, request.Email, passwordHash));
             return new(user);
         }
     }

@@ -4,13 +4,14 @@ using TodoAspireApp.Domain.Entities;
 
 namespace TodoAspireApp.Infrastructure.Persistence
 {
-    public class UserRepository(ApplicationDbContext context) : IUserRepository
+    public class UserRepository(ApplicationDbContext context) 
+        : IUserRepository
     {
-        public async Task<User> Create(User user)
+        public async Task<User> Add(User user)
         {
-            var insertedUser = await context.AddAsync(user);
+            var entityEntry = await context.AddAsync(user);
             await context.SaveChangesAsync();
-            return insertedUser.Entity;
+            return entityEntry.Entity;
         }
 
         public Task<User?> FindByEmail(string email)

@@ -4,7 +4,7 @@ namespace TodoAspireApp.Application.Interfaces.Persistence
 {
     public interface IUserRepository
     {
-        Task<User> Create(User user);
+        Task<User> Add(User user);
         Task<User?> FindByEmail(string email);
     }
 }

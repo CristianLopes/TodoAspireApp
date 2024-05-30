@@ -9,7 +9,7 @@ namespace TodoAspireApp.Domain.Entities
         public Guid UserId { get; set; }
         public Guid TodoItemId { get; set; }
 
-        public User User { get; set; } = null;
-        public TodoItem TodoItem { get; set; } = null;
+        public User? User { get; set; }
+        public TodoItem? TodoItem { get; set; }
     }
 }

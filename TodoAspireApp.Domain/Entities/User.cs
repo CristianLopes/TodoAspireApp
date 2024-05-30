@@ -3,26 +3,19 @@ using System.Text.Json.Serialization;
 
 namespace TodoAspireApp.Domain.Entities
 {
-    public class User
+    public class User(string name, string email, string passwordHash)
     {
-        public User(string name, string email, string passwordHash)
-        {
-            Name = name;
-            Email = email;
-            PasswordHash = passwordHash;
-        }
-
         [Key]
-        public Guid Id { get; private set; }
+        public Guid Id { get; private set; } = Guid.NewGuid();
 
         [Required, MaxLength(150)]
-        public string Name { get; private set; }
+        public string Name { get; private set; } = name;
 
         [Required, MaxLength(80)]
-        public string Email { get; private set; }
+        public string Email { get; private set; } = email;
 
         [JsonIgnore]
         [Required, MaxLength(50)]
-        public string PasswordHash { get; private set; }
+        public string PasswordHash { get; private set; } = passwordHash;
     }
 }
