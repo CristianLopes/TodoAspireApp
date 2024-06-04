@@ -12,5 +12,17 @@ namespace TodoApp.NUnitTests
             data.Add(requestLinkAccount);
             return Task.FromResult(requestLinkAccount);
         }
+
+        public Task<RequestLinkAccount> GetById(Guid requestLinkAccountId)
+        {
+            return Task.FromResult(data.FirstOrDefault(x => x.Id == requestLinkAccountId));
+        }
+
+        public Task<RequestLinkAccount> Update(RequestLinkAccount requestLinkAccount)
+        {
+            var item = data.Where(x => x.Id == requestLinkAccount.Id).FirstOrDefault();
+            item.Approved_At = requestLinkAccount.Approved_At;
+            return Task.FromResult(item);
+        }
     }
 }

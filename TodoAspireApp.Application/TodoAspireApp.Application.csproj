@@ -14,8 +14,4 @@
     <ProjectReference Include="..\TodoAspireApp.Domain\TodoAspireApp.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UseCases\LinkAccounts\Approval\" />
-  </ItemGroup>
-
 </Project>

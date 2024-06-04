@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TodoAspireApp.Domain.Entities
 {
@@ -14,9 +13,9 @@ namespace TodoAspireApp.Domain.Entities
         [Required]
         public Guid LinkedUserId { get; private set; } = linkedUserId;
 
-        public DateTime? Approved_At { get; private set; }
+        public DateTime? Approved_At { get; set; }
        
-        public bool Expired { get; private set; }
+        public bool Expired { get; set; }
 
 
         public User? User { get; set; }
